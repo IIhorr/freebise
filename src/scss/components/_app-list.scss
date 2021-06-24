@@ -1,0 +1,82 @@
+@import '../mixin/breakpoint';
+
+.app-list {
+  &__item {
+    padding-left: 110px;
+    position: relative;
+    // max-width: 283px;
+    &:not(:last-child) {
+      margin-bottom: 60px;
+    }
+  }
+
+  &__inner {
+    padding-right: 40px;
+  }
+
+  &__title {
+    display: block;
+    font: var(--font-bold);
+    margin-bottom: 10px;
+  }
+  &__descr {
+    font: var(--font-regular);
+    color: var(--color-mid-gray);
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 88px;
+    height: 88px;
+    border-radius: 100%;
+  }
+  &--flex {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .app-list__item {
+      margin: 0;
+      padding-left: 0;
+      flex-basis: 283px;
+
+      &:not(:last-child) {
+        margin-right: 60px;
+      }
+    }
+
+    .app-list__icon {
+      position: static;
+      transform: none;
+      margin-bottom: 35px;
+    }
+  }
+
+  &--flex-col-2 {
+    .app-list__item {
+      &:nth-child(-n + 2) {
+        margin-bottom: 70px;
+      }
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+
+      @include small-tablet {
+        margin-right: 20px !important;
+      }
+      @include mobile {
+        margin-right: 0 !important;
+      }
+    }
+    .app-list__icon {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}

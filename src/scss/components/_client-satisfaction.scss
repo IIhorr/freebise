@@ -1,0 +1,89 @@
+@import '../mixin/breakpoint';
+
+.client-satisfaction {
+  margin-bottom: 173px;
+  &__container {
+    display: flex;
+    max-width: 1600px;
+    padding: 0 15px;
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  &__photo {
+    max-width: 785px;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__info {
+    max-width: 600px;
+    @include tablet {
+      max-width: 100%;
+    }
+  }
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__descr {
+    margin-bottom: 44px;
+  }
+
+  &__stats {
+    margin-bottom: 60px;
+  }
+
+  &__cust {
+    display: block;
+    font: var(--font-bold);
+    font-size: 20px;
+    color: var(--color-blue);
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    margin-bottom: 60px;
+  }
+
+  &__slide {
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding-left: 110px;
+
+    &__img {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+    }
+
+    &__name {
+      display: block;
+      font: var(--font-bold);
+      font-size: 18px;
+      color: var(--color-blue);
+      margin-bottom: 5px;
+    }
+
+    &__next {
+    }
+
+    &__prev {
+    }
+  }
+
+  @include tablet {
+    margin-bottom: 70px;
+  }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+}

@@ -1,0 +1,32 @@
+.toppos {
+  display: flex;
+  align-items: center;
+  max-width: 360px;
+  background-color: var(--color-gray);
+  border-radius: 17px;
+
+  &__icon {
+    background-color: #feaa25;
+    width: 39px;
+    height: 35px;
+    border-radius: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+  }
+
+  &__descr {
+    padding: 6px;
+    padding-left: 0;
+    font: var(--font-medium);
+    font-size: 18px;
+    color: var(--color-blue);
+  }
+
+  @include mobile {
+    padding: 10px;
+    flex-direction: column;
+    max-width: 100%;
+  }
+}

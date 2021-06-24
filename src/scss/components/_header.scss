@@ -1,0 +1,55 @@
+@import '../mixin/breakpoint';
+
+.header {
+  top: 93px;
+  position: absolute;
+  background-color: var(--color-white);
+  width: 100%;
+
+  &.sticky {
+    padding: 20px 0;
+    top: 0;
+
+    @include mobile {
+      padding: 10px 0;
+    }
+  }
+
+  &__logo {
+    span {
+      &:nth-child(2) {
+        color: var(--color-blue);
+      }
+    }
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+  }
+
+  &__nav {
+    margin-right: 45px;
+  }
+
+  &__btn {
+    @include small-tablet {
+      display: none;
+    }
+  }
+
+  @include mobile {
+    top: 0;
+  }
+}
+
+.sticky.header {
+  z-index: 10;
+  position: fixed;
+}

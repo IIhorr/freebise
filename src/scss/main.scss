@@ -1,0 +1,32 @@
+@import './vendors';
+@import './mixins';
+@import './fonts';
+@import './var';
+@import './settings';
+
+// components
+
+// small
+@import './components/nav';
+@import './components/toppos';
+@import './components/btn';
+@import './components/app-list';
+@import './components/stats';
+@import './components/accoridion';
+@import './components/social';
+@import './components/burger';
+
+// big
+@import './components/header';
+@import './components/hero';
+@import './components/companies-like';
+@import './components/aweasome-app';
+@import './components/smart-jackpots';
+@import './components/design';
+@import './components/choose-app';
+@import './components/ultimate-feature';
+@import './components/get-features';
+@import './components/client-satisfaction';
+@import './components/questions';
+@import './components/donwload';
+@import './components/footer';

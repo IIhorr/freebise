@@ -1,0 +1,14 @@
+.stats {
+  display: flex;
+  align-items: center;
+
+  &__item {
+    svg {
+      width: 21px;
+      height: 21px;
+    }
+    &:not(:last-child) {
+      margin-right: 7px;
+    }
+  }
+}

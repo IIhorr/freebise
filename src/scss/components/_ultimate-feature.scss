@@ -1,0 +1,98 @@
+@import '../mixin/breakpoint';
+
+.ultimate-features {
+  position: relative;
+  margin-bottom: 175px;
+
+  &__container {
+    display: flex;
+    max-width: 1600px;
+    padding: 0 15px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+
+    @include desktop {
+      padding-left: 100px;
+    }
+  }
+
+  &__inner {
+    @include desktop {
+      max-width: 490px;
+    }
+  }
+
+  &__info {
+    max-width: 700px;
+    @include small-tablet {
+      max-width: 100%;
+    }
+  }
+  &__title {
+    margin-bottom: 30px;
+    width: auto;
+    @include desktop {
+      width: 340px;
+    }
+  }
+
+  &__descr {
+    margin-bottom: 60px;
+  }
+
+  &__photo {
+    max-width: 710px;
+    position: relative;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__phone {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: contain;
+    &:nth-child(2) {
+      z-index: 1;
+    }
+    &:nth-child(3) {
+      right: 24%;
+    }
+  }
+
+  &__list {
+    justify-content: start;
+    margin-bottom: 77px;
+
+    @include tablet {
+      justify-content: center;
+    }
+    @include small-tablet {
+      justify-content: space-between;
+    }
+    .app-list__item {
+      flex-grow: 1;
+      flex-shrink: 1;
+
+      @include small-tablet {
+        flex-basis: 40%;
+      }
+      @include mobile {
+        text-align: center;
+        flex-basis: 70%;
+      }
+    }
+    .app-list__icon {
+      margin-left: 0;
+      margin-right: 0;
+
+      @include small-tablet {
+        margin: 0 auto 35px;
+      }
+    }
+  }
+}

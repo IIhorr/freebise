@@ -1,0 +1,82 @@
+@import '../mixin/breakpoint';
+
+.hero {
+  position: relative;
+
+  &__container {
+    position: relative;
+    z-index: 2;
+    align-items: center;
+  }
+
+  &__info {
+    grid-column: 2 / 8;
+
+    @include small-tablet {
+      grid-column: 12 span;
+    }
+  }
+
+  &__toppos {
+    margin-bottom: 25px;
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &__photo {
+    grid-column: 8 / -1;
+
+    @include small-tablet {
+      display: none;
+    }
+  }
+
+  &__bg {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    pointer-events: none;
+  }
+
+  &__title {
+    font: var(--font-bold);
+    color: var(--color-blue);
+    font-size: 60px;
+    margin-bottom: 25px;
+  }
+
+  &__descr {
+    font: var(--font-regular);
+    font-size: 18px;
+    color: var(--color-blue);
+    line-height: 28px;
+    margin-bottom: 40px;
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+
+    button:not(:last-child) {
+      margin-right: 25px;
+      font: var(--font-regular);
+      font-size: 16px;
+    }
+  }
+
+  @include small-tablet {
+    padding-bottom: 40px;
+    margin-bottom: 70px;
+  }
+
+  @include mobile {
+    margin-bottom: 30px;
+  }
+}

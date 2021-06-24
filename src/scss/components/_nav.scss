@@ -1,0 +1,30 @@
+@import '../mixin/breakpoint';
+.nav {
+  &__list {
+    display: flex;
+    align-items: center;
+
+    @include small-tablet {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 35px;
+    }
+
+    @include small-tablet {
+      &:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__link {
+    pointer-events: none;
+    font: var(--font-regular);
+    color: var(--color-blue);
+  }
+}
